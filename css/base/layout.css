@@ -40,22 +40,21 @@
 }
 
 .visible {
-    display: inline-block;
+    display: inline-block !important;
 }
 .visible-flex {
-    display: flex;
+    display: flex !important;
 }
 .visible-grid {
-    display: grid;
+    display: grid !important;
 }
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .container > .row > [class*='col-'] {
     float: left;
     margin: 10px var(--half-gap);
-    border: 1px solid red;
 }
 .container > .row > .col-1 {
     width: var(--col1);
@@ -136,16 +135,16 @@
         --half-gap: 15px;
     }
     .visible-sm {
-        display: inline-block;
+        display: inline-block !important;
     }
     .visible-sm-flex {
-        display: flex;
+        display: flex !important;
     }
     .visible-sm-grid {
-        display: grid;
+        display: grid !important;
     }
     .hidden-sm {
-        display: none;
+        display: none !important;
     }
     .container > .row {
         width: 540px;
@@ -231,16 +230,16 @@
         --half-gap: 20px;
     }
     .visible-md {
-        display: inline-block;
+        display: inline-block !important;
     }
     .visible-md-flex {
-        display: flex;
+        display: flex !important;
     }
     .visible-md-grid {
-        display: grid;
+        display: grid !important;
     }
     .hidden-md {
-        display: none;
+        display: none !important;
     }
     .container > .row {
         width: 720px;
@@ -326,16 +325,16 @@
         --half-gap: 25px;
     }
     .visible-lg {
-        display: inline-block;
+        display: inline-block !important;
     }
     .visible-lg-flex {
-        display: flex;
+        display: flex !important;
     }
     .visible-lg-grid {
-        display: grid;
+        display: grid !important;
     }
     .hidden-lg {
-        display: none;
+        display: none !important;
     }
     .container > .row {
         width: 960px;
@@ -421,16 +420,16 @@
         --half-gap: 30px;
     }
     .visible-xl {
-        display: inline-block;
+        display: inline-block !important;
     }
     .visible-xl-flex {
-        display: flex;
+        display: flex !important;
     }
     .visible-xl-grid {
-        display: grid;
+        display: grid !important;
     }
     .hidden-xl {
-        display: none;
+        display: none !important;
     }
     .container > .row {
         width: 1140px;
@@ -516,16 +515,16 @@
         --half-gap: 30px;
     }
     .visible-xxl {
-        display: inline-block;
+        display: inline-block !important;
     }
     .visible-xxl-flex {
-        display: flex;
+        display: flex !important;
     }
     .visible-xxl-grid {
-        display: grid;
+        display: grid !important;
     }
     .hidden-xxl {
-        display: none;
+        display: none !important;
     }
     .container > .row {
         width: 1320px;
