@@ -1,6 +1,6 @@
 import { Services } from "../components/Services.js";
-
-console.log('home page...');
+import { servicesData } from "../data/servicesData.js";
+import { servicesData2 } from "../data/servicesData2.js";
 
 /* header start */
 /* header end */
@@ -13,10 +13,6 @@ console.log('home page...');
 
 /* services start */
 
-const services = new Services('services_block');
-services.render();
-
-const services2 = new Services('a');
-services2.render();
+new Services('#services_block', servicesData);
 
 /* services end */

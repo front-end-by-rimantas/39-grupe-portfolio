@@ -1,7 +1,20 @@
 class Services {
-    constructor(selector) {
+    constructor(selector, data) {
         this.selector = selector;
+        this.data = data;
         this.DOM = null;
+
+        this.init();
+    }
+
+    init() {
+        if (!this.isValidSelector()
+            || !this.findTargetElement()
+            || !this.isValidData()) {
+            return false;
+        }
+
+        this.render();
     }
 
     isValidSelector() {
@@ -13,27 +26,25 @@ class Services {
     }
 
     findTargetElement() {
-        this.DOM = document.getElementById(this.selector);
+        this.DOM = document.querySelector(this.selector);
         return !!this.DOM;
     }
 
-    render() {
-        if (!this.isValidSelector()) {
-            throw new Error('Blogas selektorius');
+    isValidData() {
+        if (!Array.isArray(this.data)) {
+            return false;
         }
+        return true;
+    }
 
-        // if (!this.findTargetElement()) {
-        //     throw new Error('Nerasta vieta');
-        // }
-
-
+    render() {
         let HTML = '';
 
-        for (let i = 0; i < 6; i++) {
+        for (const serviceItem of this.data) {
             HTML += `<div class="col-12 col-md-6 col-lg-4">
-                        <i class="fa fa-globe"></i>
-                        <h3>Labas</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!</p>
+                        <i class="fa fa-${serviceItem.icon}"></i>
+                        <h3>${serviceItem.title}</h3>
+                        <p>${serviceItem.desc}</p>
                     </div>`;
         }
 
