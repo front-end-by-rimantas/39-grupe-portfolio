@@ -37,10 +37,43 @@ class Services {
         return true;
     }
 
+    isTrueObject(obj, keysCount = 1) {
+        if (typeof obj !== 'object'
+            || obj === null
+            || Array.isArray(obj)
+            || Object.keys(obj).length !== keysCount) {
+            return false;
+        }
+        return true;
+    }
+
+    isValidString(str, size = 20) {
+        if (typeof str !== 'string'
+            || str.trim() === ''
+            || str.trim().length > size) {
+            return false;
+        }
+        return true;
+    }
+
+    isValidServiceItem(item) {
+        if (this.isTrueObject(item, 3)
+            || this.isValidString(item.icon)
+            || this.isValidString(item.title)
+            || this.isValidString(item.desc, 100)) {
+            return false;
+        }
+        return true;
+    }
+
     render() {
         let HTML = '';
 
         for (const serviceItem of this.data) {
+            if (!this.isValidServiceItem(serviceItem)) {
+                continue;
+            }
+
             HTML += `<div class="col-12 col-md-6 col-lg-4">
                         <i class="fa fa-${serviceItem.icon}"></i>
                         <h3>${serviceItem.title}</h3>

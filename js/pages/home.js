@@ -1,6 +1,5 @@
 import { Services } from "../components/Services.js";
 import { servicesData } from "../data/servicesData.js";
-import { servicesData2 } from "../data/servicesData2.js";
 
 /* header start */
 /* header end */

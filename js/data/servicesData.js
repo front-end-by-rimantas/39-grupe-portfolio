@@ -37,15 +37,65 @@ const servicesData = [
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
         hack: 'me, please 😈😬',
     },
+    {
+        a: 'globe',
+        b: 'Title',
+        c: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: '',
+        title: 'Infinity',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: '',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: 'Infinity',
+        desc: '',
+    },
+    {
+        icon: '        ',
+        title: 'Infinity',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: '        ',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: 'Infinity',
+        desc: '           ',
+    },
+    {
+        icon: 'dddddddddddddddddddddddddddddd',
+        title: 'Infinity',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
+    {
+        icon: 'globe',
+        title: 'Infinity',
+        desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
+    },
 
     {
         icon: 'globe',
-        title: 'Title',
+        title: 'Infinity',
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
     },
     {
         icon: 'plane',
-        title: 'Title',
+        title: '🎅',
         desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, rem!',
     },
     {
