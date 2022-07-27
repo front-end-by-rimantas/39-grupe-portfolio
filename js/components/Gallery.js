@@ -15,6 +15,7 @@ class Gallery {
         }
 
         this.render();
+        this.events();
     }
 
     isValidSelector() {
@@ -61,52 +62,41 @@ class Gallery {
             }
 
             HTML += `<div class="card">
-                        <img src="#" alt="Image">
+                        <img src="./img/portfolio/${item.img}" alt="Image">
                         <div class="overlay">
                             <p>${item.title}</p>
-                            ${actionsHTML}
+                            ${actionsHTML ? `<div class="actions">${actionsHTML}</div>` : ''}
                         </div>
                     </div>`;
         }
-
-        /*
-        BE NIEKO
-        <div class="overlay">
-            <p>Title</p>
-        </div>
-
-        TIK LIGHTBOX
-        <div class="overlay">
-            <p>Title</p>
-            <div class="actions">
-                <i class="fa fa-search-plus"></i>
-            </div>
-        </div>
-
-        TIK URL
-        <div class="overlay">
-            <p>Title</p>
-            <div class="actions">
-                <i class="fa fa-chain-broken"></i>
-            </div>
-        </div>
-
-        ABU
-        <div class="overlay">
-            <p>Title</p>
-            <div class="actions">
-                <i class="fa fa-search-plus"></i>
-                <i class="fa fa-chain-broken"></i>
-            </div>
-        </div>
-        */
 
         return HTML;
     }
 
     render() {
+        this.DOM.classList.add('gallery');
         this.DOM.innerHTML = `<div class="filter">${this.filterHTML()}</div>
                               <div class="list">${this.listHTML()}</div>`;
+    }
+
+    events() {
+        const filterTagsDOM = this.DOM.querySelectorAll('.filter > .item');
+        const listCardsDOM = this.DOM.querySelectorAll('.list > .card');
+
+        for (const filterTagDOM of filterTagsDOM) {
+            filterTagDOM.addEventListener('click', () => {
+                const tag = filterTagDOM.textContent;
+
+                for (let i = 0; i < this.data.length; i++) {
+                    const cardData = this.data[i];
+                    if (cardData.tags.includes(tag) || tag === 'All') {
+                        listCardsDOM[i].classList.remove('hidden');
+                    } else {
+                        listCardsDOM[i].classList.add('hidden');
+                    }
+                }
+            })
+        }
     }
 }
 
