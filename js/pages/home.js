@@ -1,4 +1,5 @@
-console.log('home page...');
+import { Services } from "../components/Services.js";
+import { servicesData } from "../data/servicesData.js";
 
 /* header start */
 /* header end */
@@ -10,4 +11,7 @@ console.log('home page...');
 /* about me end */
 
 /* services start */
+
+new Services('#services_block', servicesData);
+
 /* services end */
