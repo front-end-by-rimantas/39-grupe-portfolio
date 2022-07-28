@@ -107,8 +107,6 @@ describe('Blogi variantai', () => {
             const data = [1];
             const gallery = new Gallery('#portfolio_block', data);
 
-            console.log(document.body.innerHTML);
-
             expect(gallery.selector).toBe('#portfolio_block');
             expect(gallery.data).toStrictEqual(data);
             expect(gallery.DOM).not.toBe(null);
@@ -119,8 +117,6 @@ describe('Blogi variantai', () => {
             document.body.innerHTML = `<div id="portfolio_block"></div>`;
             const data = [null];
             const gallery = new Gallery('#portfolio_block', data);
-
-            console.log(document.body.innerHTML);
 
             expect(gallery.selector).toBe('#portfolio_block');
             expect(gallery.data).toStrictEqual(data);
