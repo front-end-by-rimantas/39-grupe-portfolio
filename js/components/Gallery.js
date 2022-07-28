@@ -14,6 +14,7 @@ class Gallery {
             return false;
         }
 
+        // atfiltruoti ir pasilikti tik validzius duomenis [{}, 1, {}] -> [{}, {}]
         this.render();
         this.events();
     }
