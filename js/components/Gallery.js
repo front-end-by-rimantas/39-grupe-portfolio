@@ -36,6 +36,11 @@ class Gallery {
         let HTML = `<div class="item active">${allTags[0]}</div>`;
 
         for (const item of this.data) {
+            if (typeof item !== 'object'
+                || item === null
+                || !item.tags) {
+                continue;
+            }
             for (const tag of item.tags) {
                 if (!allTags.includes(tag)) {
                     allTags.push(tag);
@@ -51,6 +56,11 @@ class Gallery {
         let HTML = '';
 
         for (const item of this.data) {
+            if (typeof item !== 'object'
+                || item === null) {
+                continue;
+            }
+
             let actionsHTML = '';
 
             if (this.lightboxEnabled) {

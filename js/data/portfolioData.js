@@ -1,9 +1,4 @@
 const portfolioData = [
-    // 8,
-    // '',
-    // true,
-    // [],
-    // {},
     {
         img: '1.jpg',
         title: 'Web design',
