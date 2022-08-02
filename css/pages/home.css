@@ -1,8 +1,15 @@
 /* base */
+@import '../base/base.css';
+@import '../base/layout.css';
 
 /* 3rd-party */
+@import '../3rd-party/font-awesome.min.css';
 
 /* components */
+@import '../components/button.css';
+@import '../components/footer.css';
+@import '../components/gallery.css';
+@import '../components/header.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 
@@ -13,6 +20,11 @@
 /* hero end */
 
 /* about me start */
+.about-me .section-title {
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+}
 /* about me end */
 
 /* services start */

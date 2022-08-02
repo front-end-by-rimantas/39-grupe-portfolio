@@ -1,0 +1,77 @@
+.gallery {
+    display: grid;
+    gap: 30px;
+    justify-content: stretch;
+}
+.gallery > .filter {
+    display: flex;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery > .filter > .item {
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.gallery > .filter > .item:hover {
+    text-decoration: underline;
+}
+.gallery > .filter > .item.active {
+    text-decoration: underline;
+}
+.gallery > .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+}
+.gallery > .list > .card {
+    position: relative;
+}
+.gallery > .list > .card.hidden {
+    display: none;
+}
+.gallery .card > img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+.gallery .card > .overlay {
+    --gutter: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(var(--gutter) * 2);
+    left: var(--gutter);
+    bottom: 0;
+    right: var(--gutter);
+    background-color: #fffa;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.gallery .card:hover > .overlay {
+    opacity: 1;
+    transform: translateY(calc(var(--gutter) * -1));
+}
+.gallery .overlay > p {
+}
+.gallery .overlay > .actions {
+}
+.gallery .actions > i {
+}
+.gallery .actions > i:hover {
+}
+
+@media (min-width: 576px) {
+    .gallery > .list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery > .list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

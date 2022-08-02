@@ -1,0 +1,40 @@
+.btn-group {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 0.6em 1.5em;
+    font-size: 14px;
+    line-height: 1.5em;
+    text-decoration: none;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn.btn-white {
+    background-color: #fff;
+    color: #000;
+}
+.btn.btn-white:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn.btn-small {
+    font-size: 10px;
+}
+.btn.btn-big {
+    font-size: 20px;
+}
