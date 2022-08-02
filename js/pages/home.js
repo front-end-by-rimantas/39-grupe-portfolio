@@ -37,10 +37,11 @@ achievements.add(null);
 achievements.add([]);
 
 // [C]REATE
-achievements.add({ icon: 'globe', number: 100, title: 'Happy customers' });
-achievements.add({ icon: 'globe', number: 200, title: 'Happy customers' });
-achievements.add({ icon: 'globe', number: 300, title: 'Happy customers' });
-achievements.add({ icon: 'globe', number: 400, title: 'Happy customers' });
+achievements.add({ icon: 'globe', number: 0, title: 'Demo' });
+achievements.add({ icon: 'users', number: 850, title: 'Happy customers' });
+achievements.add({ icon: 'thumbs-up', number: 230, title: 'Complete projects' });
+achievements.add({ icon: 'bullhorn', number: 9450, title: 'Lines of code' });
+achievements.add({ icon: 'cloud-download', number: 780, title: 'Files downloaded' });
 
 // [R]EAD
 const achData = achievements.list();

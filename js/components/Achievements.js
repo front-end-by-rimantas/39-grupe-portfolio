@@ -12,6 +12,7 @@ class Achievements {
         }
 
         // piesti
+        this.render();
 
         // event listeners
 
@@ -103,6 +104,20 @@ class Achievements {
 
         this.data.splice(index, 1);
         return true;
+    }
+
+    render() {
+        let HTML = '';
+
+        for (const item of this.data) {
+            HTML += `<div class="col-12 col-md-6 col-lg-3 achievement">
+                        <i class="fa fa-${item.icon}"></i>
+                        <p class="number">${item.number}</p>
+                        <p class="title">${item.title}</p>
+                    </div>`;
+        }
+
+        this.DOM.innerHTML = HTML;
     }
 }
 
