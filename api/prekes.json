@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Batai",
+        "color": "red",
+        "price": 111,
+        "forSale": true
+    },
+    {
+        "name": "Kepure",
+        "color": "red",
+        "price": 222,
+        "forSale": true
+    },
+    {
+        "name": "Striuke",
+        "color": "grey",
+        "price": 3333,
+        "forSale": true
+    },
+    {
+        "name": "Pirstines",
+        "color": "white",
+        "price": 50,
+        "forSale": true
+    }
+]
