@@ -74,3 +74,50 @@ achievements.init();
 
 /* achievements end */
 
+console.clear();
+
+// URL: https://www.puslapis.lt
+// URL: https://www.puslapis.lt/api/...
+// URL: https://www.puslapis.lt/api/kepures?token=fsghfags415f4eshdn1g5g
+// URL: https://www.puslapis.lt/api/batai
+// URL: https://www.puslapis.lt/api/masinos
+
+// GET - gauti duomenis
+const URL = 'https://raw.githubusercontent.com/front-end-by-rimantas/39-grupe-portfolio/master/api/prekes.json';
+// const URL = 'https://jkfsdgfijksfd.xyz';
+try {
+    const prekiuDuomenys = await fetch(URL, {
+        method: 'GET',
+    });
+    const tikriDuomenys = await prekiuDuomenys.json();
+    console.log(tikriDuomenys);
+
+    for (const item of tikriDuomenys) {
+        console.log(item);
+    }
+} catch (error) {
+    console.log('Ups...');
+}
+
+console.log('po uzklausos...');
+
+// POST - siusti duomenis
+// PUT - atnaujinti duomenis
+// DELETE - istrinti duomenis
+
+
+const xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+        const reponseData = xhttp.responseText;
+        const responseObject = JSON.parse(reponseData);
+        console.log(responseObject);
+    }
+};
+xhttp.open("GET", URL, true);
+xhttp.send();
+
+
+const asd = [{}, {}, {}];
+const jsonAsd = JSON.stringify(asd);
+const asd2 = JSON.parse(jsonAsd);
